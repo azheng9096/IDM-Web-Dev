@@ -15,6 +15,11 @@ p, i {
 
 a, a:visited {
   color:#b5a99c;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #8c8c8c;
 }
 
 .row {
