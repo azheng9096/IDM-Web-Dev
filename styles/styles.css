@@ -5,6 +5,7 @@
   --primary-text: whitesmoke;
   --accent-text: #EC058E;
     /* #7DE2D1; */
+  --dark-overlay: #00000070;
 }
 
 * {
@@ -78,6 +79,23 @@ main > div {
 
 .vertical-scroll-container {
   overflow-y: auto;
+}
+
+.vertical-scroll-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.vertical-scroll-container::-webkit-scrollbar-track {
+  background: var(--dark-overlay); 
+}
+ 
+.vertical-scroll-container::-webkit-scrollbar-thumb {
+  background: #486183; 
+}
+
+.vertical-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #66658e; 
+  transition: all 300ms ease-in-out;
 }
 
 .projects-container {
