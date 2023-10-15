@@ -25,6 +25,11 @@ p {
   font-size: 12px;
 }
 
+a {
+  text-decoration: none;
+  color: var(--dark-text);
+}
+
 ul {
   font-weight: 300;
 }
@@ -93,6 +98,13 @@ main {
 
 #title-slide {
   color: var(--primary-text);
+}
+#title-slide a {
+  color: var(--primary-text);
+  transition: all ease-in-out 300ms;
+}
+#title-slide a:hover {
+  text-shadow: 5px 5px #3d3d3d2c;
 }
 
 #title-slide h1 {
