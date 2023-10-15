@@ -51,6 +51,7 @@ main {
 .gradient-text {
   background-size: cover;
   background: linear-gradient(45deg, var(--gradient-colors));
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
@@ -92,6 +93,10 @@ main {
 
 #title-slide {
   color: var(--primary-text);
+}
+
+#title-slide h1 {
+  letter-spacing: 5px;
 }
 
 #artist-slide {
@@ -141,11 +146,12 @@ main {
 .quotation-bigger {
   font-size: 3rem;
   position: absolute;
-  top: -20px;
-  left: -5px;
+  top: -25px;
+  left: -15px;
 
   background-size: cover;
   background: linear-gradient(45deg, var(--gradient-colors));
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
@@ -193,7 +199,8 @@ main {
 
 .text-shadow {
   position: absolute;
-  top: 5px;
+  top: 4px;
+  left: 4px;
   opacity: 0.4;
 }
 
@@ -221,6 +228,11 @@ main {
   width: fit-content;
 }
 
+#reflection-slide h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 .reflections {
   display: flex;
   align-items: center;
@@ -228,74 +240,37 @@ main {
   gap: 50px;
 }
 
-.reflection-container {
-  height: 300px;
+.reflection {
+  overflow: hidden;
   width: 300px;
-  position: relative;
-}
-.reflection-text-container {
-  height: 100%;
-  width: 100%;
-
-  background: radial-gradient(
-    ellipse at center,
-    #78aeff 0%,
-    #ff7bf2 70%,
-    transparent 70.3%
-  );
+  height: 300px;
+  border-radius: 50%;
+  background: linear-gradient(-45deg, var(--gradient-colors));
 }
 
-.reflection-text-container p {
+.reflection .reflection-text {
   font-size: 15px;
-  height: 100%;
-  padding: 0;
-  text-align: center;
-  font-weight: 600;
   color: var(--primary-text);
+  font-weight: 600;
+  letter-spacing: 3px;
 }
-.reflection-text-container::before {
+
+.reflection span[aria-hidden="true"] {
+  display: contents;
+}
+.reflection span[aria-hidden="true"]:before,
+.reflection span[aria-hidden="true"]:after {
   content: "";
+
+  width: 50%;
+  height: 100%;
+}
+
+.reflection span[aria-hidden="true"]:before {
   float: left;
-  height: 100%;
-  width: 50%;
-  shape-outside: polygon(
-    0 0,
-    98% 0,
-    50% 6%,
-    23.4% 17.3%,
-    6% 32.6%,
-    0 50%,
-    6% 65.6%,
-    23.4% 82.7%,
-    50% 94%,
-    98% 100%,
-    0 100%
-  );
-  shape-margin: 7%;
+  shape-outside: radial-gradient(farthest-side at 100%, transparent 90%, black);
 }
-
-.reflection-text-container p::before {
-  content: "";
+.reflection span[aria-hidden="true"]:after {
   float: right;
-  height: 100%;
-  width: 50%;
-  shape-outside: polygon(
-    2% 0%,
-    100% 0%,
-    100% 100%,
-    2% 100%,
-    50% 94%,
-    76.6% 82.7%,
-    94% 65.6%,
-    100% 50%,
-    94% 32.6%,
-    76.6% 17.3%,
-    50% 6%
-  );
-  shape-margin: 7%;
-}
-
-#reflection-slide h2 {
-  text-align: center;
-  margin-bottom: 30px;
+  shape-outside: radial-gradient(farthest-side at 0, transparent 90%, black);
 }
