@@ -286,6 +286,10 @@ main {
 }
 
 @media only screen and (max-width: 480px) {
+  main {
+    min-height: 100vh;
+    height: auto;
+  }
   body {
     font-size: 0.625rem;
   }
@@ -302,7 +306,6 @@ main {
 
   .artist-slide-content {
     flex-direction: column-reverse;
-    gap: 50px;
   }
 
   .artist-intro {
@@ -315,6 +318,10 @@ main {
   }
   .quotation-bigger {
     font-size: 40px;
+  }
+
+  .artist-img-container {
+    margin: 50px 0;
   }
 
   .artist-img-container .img-container {
@@ -337,7 +344,18 @@ main {
     margin: 20px 0;
     position: static;
   }
-  #artist .nav img {
+  #artist .nav img{
     width: 20px;
+  }
+
+  #reflection .center-container {
+    position: static;
+    transform: none;
+  }
+  .reflections {
+    flex-direction: column;
+  }
+  .reflection {
+    transform: scale(0.5, 0.5);
   }
 }
