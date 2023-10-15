@@ -121,7 +121,7 @@ main {
   gap: 60px;
 }
 
-.artist-text-container quote {
+.artist-text-container blockquote {
   font-weight: 700;
   font-style: italic;
   letter-spacing: 0.5px;
@@ -156,6 +156,16 @@ main {
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
+}
+
+.img-container {
+  height: 100%;
+  overflow: hidden;
+}
+
+.img-container img {
+  height: 100%;
+  object-fit: cover;
 }
 
 #art-slide {
@@ -273,4 +283,61 @@ main {
 .reflection span[aria-hidden="true"]:after {
   float: right;
   shape-outside: radial-gradient(farthest-side at 0, transparent 90%, black);
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 0.625rem;
+  }
+  h2 {
+    font-size: 1.25rem;
+  }
+  p {
+    font-size: 0.5rem;
+  }
+
+  #artist-slide .vertical-decor-sidebar {
+    display: none;
+  }
+
+  .artist-slide-content {
+    flex-direction: column-reverse;
+    gap: 50px;
+  }
+
+  .artist-intro {
+    width: 75%;
+  }
+
+  #artist-slide blockquote {
+    width: 75%;
+    font-size: 0.6875rem;
+  }
+  .quotation-bigger {
+    font-size: 40px;
+  }
+
+  .artist-img-container .img-container {
+    width: 50vw;
+    height: 50vw;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    background: linear-gradient(white, white) padding-box,
+      linear-gradient(45deg, var(--gradient-colors)) border-box;
+    border: 10px solid transparent;
+    border-radius: 20px;
+  }
+  #artist-slide .img-container img {
+    width: 100%;
+  }
+
+  #artist .nav {
+    margin: 20px 0;
+    position: static;
+  }
+  #artist .nav img {
+    width: 20px;
+  }
 }
