@@ -20,7 +20,7 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 
-button {
+button, input {
   font-family: "Quicksand", sans-serif;
 }
 
@@ -239,6 +239,92 @@ nav .nav-brand:hover {
   width: 75%;
 }
 
+.sell-results-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sell-results {
+  height: 80%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+
+  overflow: hidden;
+}
+.sell-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sell-container form {
+  width: 90%;
+}
+.sell-container h2 {
+  margin-bottom: 20px;
+}
+.sell-input {
+  background-color: transparent;
+  border: 1px solid var(--primary-text);
+  border-radius: 5px;
+
+  padding: 10px;
+  width: 50%;
+  color: var(--primary-text);
+}
+.sell-submit {
+  background-color: transparent;
+  border: 1px solid var(--primary-text);
+  border-radius: 5px;
+
+  padding: 10px;
+  color: var(--primary-text);
+
+  transition: all ease-in-out 250ms;
+}
+.sell-submit:hover {
+  cursor: pointer;
+  background-color: var(--primary-text);
+  color: var(--primary-bkg);
+}
+.sell-profit-container {
+  margin-top: 30px;
+  width: 90%;
+
+  color: var(--muted-color);
+  font-size: 0.75rem;
+}
+.sell-profit-container #total-profit {
+  color: #c1694e;
+  font-weight: 800;
+}
+
+.sell-result {
+  background-color: var(--primary-text);
+  color: var(--primary-bkg);
+  border-radius: 5px;
+  padding: 15px 20px;
+  width: 80%;
+  margin: 5px 20px;
+
+  display: flex;
+  align-items: center;
+}
+.sell-result .sell-result-post p {
+  font-size: 0.75rem;
+  color: var(--muted-color);
+}
+.sell-result .sell-result-price {
+  margin-left: auto;
+
+  font-weight: 600;
+  color:#f26439;
+}
+
 .reflections-container {
   height: 100%;
   display: flex;
@@ -304,7 +390,7 @@ nav .nav-brand:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  
+
   width: 70vw;
   height: 70vh;
 

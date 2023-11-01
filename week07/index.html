@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
     <title>Web 2.0</title>
   </head>
   <body>
@@ -164,7 +165,9 @@
         <ul class="data-surv-neg">
           <li>Discrimination</li>
           <li>Another way to enable stalking</li>
-          <li>For profit selling of consumer data for targetted advertisement</li>
+          <li>
+            For profit selling of consumer data for targetted advertisement
+          </li>
         </ul>
         <br /><br />
         <a
@@ -176,6 +179,44 @@
       </div>
       <div class="surv-img-container">
         <img src="images/cctv-camera.png" />
+      </div>
+    </div>
+    <div class="section-100vh d-flex">
+      <div class="sell-results-container">
+        <div class="sell-results">
+          <div class="sell-result">
+            <div class="sell-result-post">
+              <h4>Bought some seafood today!</h4>
+              <p>Post by You</p>
+            </div>
+            <div class="sell-result-price">
+              <p>$0.50</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sell-container">
+        <form name="blog" onsubmit="event.preventDefault();">
+          <h2>The Blog</h2>
+          <input
+            name="sellinput"
+            class="sell-input"
+            placeholder="Share something interesting today"
+          />
+          <input
+            type="submit"
+            class="sell-submit"
+            value="Submit"
+            onclick="SellPost(this.form)"
+          />
+        </form>
+        <div class="sell-profit-container">
+          <p>
+            The company has earned <span id="total-profit">$0.50</span> from
+            you! <br />
+            Thank you for your contribution.
+          </p>
+        </div>
       </div>
     </div>
   </body>
