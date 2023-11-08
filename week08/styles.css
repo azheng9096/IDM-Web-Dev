@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2 {
+  letter-spacing: 1.5px;
+}
+
+main {
+  display: flex;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.to-do-container {
+  width: 70%;
+}
+
+.to-do-lists-container {
+  width: 100%;
+
+  display: flex;
+}
+.to-do-lists-container > div {
+  flex: 1;
+
+  padding: 5px 20px;
+}
+
+.to-do-item-container {
+  padding: 10px;
+  margin: 5px 0;
+
+  display: flex;
+  align-items: center;
+  
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.to-do-container .to-do-item {
+  display: flex;
+}
+
+.to-do-container .to-do-item input[type=checkbox] {
+  width: auto;
+}
+
+.to-do-container .to-do-item span {
+  margin-left: 10px;
+}
+
+.to-do-container button {
+  margin-left: auto;
+
+  border: none;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: transparent;
+  cursor: pointer;
+
+  color: rgb(247, 95, 95);
+}
+
+.to-do-completed {
+  text-decoration: line-through;
+}
