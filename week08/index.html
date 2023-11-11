@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
     <title>To Do List</title>
@@ -14,15 +17,64 @@
         <h2>To Do List:</h2>
         <div class="to-do-lists-container">
           <div id="to-do-list">
-            
+            <p>To Do Items</p>
+            <div class="to-do-items">
+              <div class="to-do-item-container">
+                <label class="to-do-item">
+                  <input type="checkbox" onclick="completeItem(this)" />
+                  <span> Buy carrots </span>
+                </label>
+                <button onclick="deleteItem(this)">
+                  <span class="material-symbols-outlined"> delete </span>
+                </button>
+              </div>
+            </div>
           </div>
-          <div id="to-do-complete"></div>
+          <div id="to-do-complete">
+            <p>Completed Items</p>
+            <div id="to-do-items"></div>
+          </div>
         </div>
       </div>
-      <div>
-        <label for="toDoInput">New list item:</label>
-        <input type="text" id="toDoInput" name="toDoInput" required />
-        <button id="to-do-submit">Add</button>
+      <div class="create-container">
+        <form id="create-task-form">
+          <h3>Add New Task</h3>
+          <input
+            type="text"
+            id="toDoInput"
+            name="toDoInput"
+            placeholder="New to-do"
+            required
+          />
+          <!-- <input
+            type="datetime-local"
+            id="meeting-time"
+            name="meeting-time"
+            value="2018-06-12T19:30"
+            min="2018-06-07T00:00"
+            max="2018-06-14T00:00"
+          /> -->
+          <button id="to-do-submit">Add</button>
+        </form>
+        <form id="create-tag-form">
+          <h3>Create New Tag</h3>
+          <div class="new-tag-input-container">
+            <input
+              type="color"
+              id="newTagColor"
+              name="newTagColor"
+              value="#e66465"
+            />
+            <input
+              type="text"
+              id="newTagInput"
+              name="newTagInput"
+              placeholder="New tag"
+              required
+            />
+            <button id="new-tag-submit" type="submit">+</button>
+          </div>
+        </form>
       </div>
     </main>
   </body>

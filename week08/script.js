@@ -1,11 +1,16 @@
+let tags = [];
+
 const submit_btn = document.querySelector("#to-do-submit");
 const to_do_input = document.querySelector("#toDoInput");
 let to_do_list = document.querySelector("#to-do-list");
+let complete_list = document.querySelector("#to-do-complete");
 
 submit_btn.addEventListener("click", makeList);
 
 function makeList() {
   let to_do_input_val = to_do_input.value;
+  if (to_do_input_val.trim() === "") return;
+
   let to_do_container = document.createElement("div");
   to_do_container.className = "to-do-item-container";
 
@@ -40,9 +45,12 @@ function deleteItem(e) {
 function completeItem(e) {
   let text_container = e.parentNode.querySelector("span");
 
+  let task_element = e.parentNode.parentNode;
   if (e.checked) {
     text_container.classList.add("to-do-completed");
+    complete_list.appendChild(task_element)
   } else {
     text_container.classList.remove("to-do-completed");
+    to_do_list.appendChild(task_element);
   }
 }
