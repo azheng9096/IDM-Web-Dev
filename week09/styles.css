@@ -205,7 +205,6 @@ main {
   height: 60px;
 
   display: flex;
-  /* background-color: #1b1a1d; */
 }
 
 .smartphone-container .img-wrapper {
@@ -242,6 +241,7 @@ main {
   display: none;
 }
 
+/* Reference: https://www.w3schools.com/howto/howto_js_snackbar.asp */
 .toast-container {
   flex: 1;
   position: relative;

@@ -1,4 +1,5 @@
 // --- MEDIA DYNAMIC SETUP ---
+// Reference: https://stackoverflow.com/questions/39020670/rotate-objects-around-circle-using-css
 const radius = 250;
 const media_items = document.querySelectorAll(".media-item");
 const media_items_container = document.querySelector(".media-items-container");
