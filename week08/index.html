@@ -13,21 +13,40 @@
   </head>
   <body>
     <main>
+      <div class="filter-container">
+        <div id="filter-form">
+          <h3>Filter By Tag</h3>
+          <div class="tag-filters">
+            <!-- Example Tag Filter Item-->
+            <!-- <label class="tag-filter-item">
+              <input type="checkbox" />
+              <span> Tag </span>
+            </label> -->
+          </div>
+          <button id="apply-filter-btn">Apply Filter</button>
+        </div>
+      </div>
       <div class="to-do-container">
         <h2>To Do List:</h2>
         <div class="to-do-lists-container">
           <div id="to-do-list">
             <p>To Do Items</p>
             <div class="to-do-items">
-              <div class="to-do-item-container">
-                <label class="to-do-item">
-                  <input type="checkbox" onclick="completeItem(this)" />
-                  <span> Buy carrots </span>
-                </label>
+              <!-- Example Item -->
+              <!-- <div class="to-do-item-container">
+                <div class="to-do-left">
+                  <div class="to-do-tags-container">
+                    <div class="to-do-tag"></div>
+                  </div>
+                  <label class="to-do-item">
+                    <input type="checkbox" onclick="completeItem(this)" />
+                    <span> Buy carrots </span>
+                  </label>
+                </div>
                 <button onclick="deleteItem(this)">
                   <span class="material-symbols-outlined"> delete </span>
                 </button>
-              </div>
+              </div> -->
             </div>
           </div>
           <div id="to-do-complete">
@@ -37,7 +56,7 @@
         </div>
       </div>
       <div class="create-container">
-        <form id="create-task-form">
+        <div id="create-task-form">
           <h3>Add New Task</h3>
           <input
             type="text"
@@ -46,17 +65,43 @@
             placeholder="New to-do"
             required
           />
-          <!-- <input
-            type="datetime-local"
-            id="meeting-time"
-            name="meeting-time"
-            value="2018-06-12T19:30"
-            min="2018-06-07T00:00"
-            max="2018-06-14T00:00"
-          /> -->
+          <!-- https://www.24a11y.com/2019/select-your-poison-part-2/ -->
+          <label id="combo3-label" class="combo-label"> Tags (Optional) </label>
+          <span id="combo3-remove" style="display: none">remove</span>
+          <div class="combo js-inline-buttons">
+            <div
+              role="combobox"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+              aria-owns="listbox3"
+              class="input-wrapper multiselect-inline"
+            >
+              <ul
+                class="selected-options"
+                aria-live="assertive"
+                aria-atomic="false"
+                aria-relevant="additions removals"
+                id="combo3-selected"
+              ></ul>
+              <input
+                aria-activedescendant=""
+                aria-autocomplete="list"
+                aria-labelledby="combo3-label combo3-selected"
+                id="combo3"
+                class="combo-input"
+                type="text"
+              />
+            </div>
+            <div
+              class="combo-menu"
+              role="listbox"
+              aria-multiselectable="true"
+              id="listbox3"
+            ></div>
+          </div>
           <button id="to-do-submit">Add</button>
-        </form>
-        <form id="create-tag-form">
+        </div>
+        <div id="create-tag-form">
           <h3>Create New Tag</h3>
           <div class="new-tag-input-container">
             <input
@@ -72,9 +117,9 @@
               placeholder="New tag"
               required
             />
-            <button id="new-tag-submit" type="submit">+</button>
+            <button id="new-tag-submit">+</button>
           </div>
-        </form>
+        </div>
       </div>
     </main>
   </body>
