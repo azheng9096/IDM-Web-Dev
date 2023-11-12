@@ -134,8 +134,7 @@ function incrementNotifAlarm() {
 function incrementNotif() {
   num_notifs++;
   notif_icon.classList.remove("hide");
-  if (num_notifs > 99) notif_icon.textContent = "99+"; 
-  else notif_icon.textContent = num_notifs + "";
+  notif_icon.textContent = (num_notifs > 99) ? "99+" : (num_notifs + "");
   notif_sfx.play();
 }
 
