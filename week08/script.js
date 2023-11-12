@@ -80,7 +80,7 @@ function deleteItem(e) {
 function completeItem(e) {
   let text_container = e.parentNode.querySelector("span");
 
-  let task_element = e.parentNode.parentNode;
+  let task_element = e.parentNode.parentNode.parentNode;
   if (e.checked) {
     text_container.classList.add("to-do-completed");
     complete_list.appendChild(task_element);
