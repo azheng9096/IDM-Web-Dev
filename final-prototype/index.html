@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <title>Cafe Day</title>
+  </head>
+  <body>
+    <main class="vh-100">
+      <div class="game-container">
+        <div class="left-gameplay-container">
+          <div class="ui-container"></div>
+          <div class="maker-station-container">
+            <div class="customers-container">
+              <div
+                class="customer-order"
+                data-order="bubble-tea"
+                ondragover="OnDragOver(event)"
+                ondrop="ReceiveDrink(event)"
+                ondragenter="ShowSubmitOrder(event)"
+                ondragleave="HideSubmitOrder(event)"
+              >
+                <div class="order-icon">
+                  <img src="images/boba.png" />
+                </div>
+                <p class="order-name">Order Name</p>
+                <progress value="32" max="100">5s</progress>
+                <div class="order-submit-overlay">
+                  <p>Submit Order</p>
+                </div>
+              </div>
+              <div
+                class="customer-order"
+                data-order="bubble-tea"
+                ondragover="OnDragOver(event)"
+                ondrop="ReceiveDrink(event)"
+                ondragenter="ShowSubmitOrder(event)"
+                ondragleave="HideSubmitOrder(event)"
+              >
+                <div class="order-icon">
+                  <img src="images/boba.png" />
+                </div>
+                <p class="order-name">Order Name</p>
+                <progress value="32" max="100">5s</progress>
+                <div class="order-submit-overlay">
+                  <p>Submit Order</p>
+                </div>
+              </div>
+            </div>
+            <div class="maker-station" style="background-color: tomato">
+              <div class="maker-station-cups-container">
+                <div class="cup-container">
+                  <img
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                    draggable="false"
+                    ondragstart="StartDragDrink(event)"
+                    ondrag="DragDrink()"
+                    ondragend="EndDragDrink()"
+                    data-drink=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ingredients-container">
+          <div class="ingredients-panel">
+            <div class="cup-section">
+              <h3>Cup</h3>
+              <div class="cups-grid-container">
+                <button class="cup-item-container" data-ingredient="cup-item">
+                  <div class="cup-item">
+                    <img src="images/cup.png" />
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div class="ingredients-section">
+              <h3>Ingredients</h3>
+              <div class="ingredients-grid-container">
+                <button
+                  class="ingredient-item-container"
+                  data-ingredient="boba-item"
+                >
+                  <div class="ingredient-item">
+                    <!-- <img
+                      src="images/boba_ingredient.png"
+                      data-ingredient="boba-item"
+                    /> -->
+                    <p>Boba</p>
+                  </div>
+                </button>
+                <!-- <button
+                  class="ingredient-item-container"
+                  data-ingredient="ice-item"
+                >
+                  <div class="ingredient-item">
+                    <p>Ice</p>
+                  </div>
+                </button> -->
+                <button
+                  class="ingredient-item-container"
+                  data-ingredient="tea-item"
+                >
+                  <div class="ingredient-item">
+                    <p>Tea</p>
+                  </div>
+                </button>
+                <button
+                  class="ingredient-item-container"
+                  data-ingredient="milk-item"
+                >
+                  <div class="ingredient-item">
+                    <p>Milk</p>
+                  </div>
+                </button>
+                <button
+                  class="ingredient-item-container"
+                  data-ingredient="syrup-item"
+                >
+                  <div class="ingredient-item">
+                    <p>Syrup</p>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div class="trash-section">
+              <h3>Trash</h3>
+              <button class="trash-item-container" onclick="DiscardDrink()">
+                <div class="trash-item">
+                  <p>Trash</p>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
