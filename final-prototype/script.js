@@ -168,11 +168,11 @@ function MakeOrder() {
   order_name.className = "order-name";
   order_name.textContent = order.name;
 
-  let progress_bar = document.createElement("progress");
+  let progress_bar = document.createElement("p");
+  progress_bar.className = "order-progress";
   let order_time = 100;
-
-  progress_bar.value = order_time;
-  progress_bar.max = order_time;
+  progress_bar.setAttribute("data-order-time", order_time);
+  progress_bar.textContent = `Time Left: ${order_time}s`;
 
   let order_submit_overlay = document.createElement("div");
   order_submit_overlay.className = "order-submit-overlay";
@@ -191,8 +191,13 @@ function MakeOrder() {
 function DecreaseOrderTimer() {
   let orders = document.querySelectorAll(".customer-order");
   orders.forEach((order) => {
-    let progress_bar = order.querySelector("progress");
-    progress_bar.value--;
+    let progress_bar = order.querySelector(".order-progress");
+    let time_left = parseInt(progress_bar.getAttribute("data-order-time"));
+    if (time_left > 0) {
+      time_left--;
+      progress_bar.setAttribute("data-order-time", time_left);
+      progress_bar.textContent = `Time Left: ${time_left}s`;
+    }
   });
 }
 setInterval(DecreaseOrderTimer, 1000);
