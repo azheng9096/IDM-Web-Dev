@@ -6,6 +6,8 @@
 
 [Cafe Day Preview](docs_assets/preview.mp4)
 
+https://github.com/azheng9096/IDM-Web-Dev/assets/26550446/156e8dcd-6980-49ac-b81d-f1c779d11bbe
+
 ---
 
 # Code Documentation
