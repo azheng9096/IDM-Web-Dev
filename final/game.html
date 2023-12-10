@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <title>Cafe Day</title>
+  </head>
+  <body>
+    <main class="vh-100">
+      <div class="game-container">
+        <div class="maker-station-countertop"></div>
+        <div class="left-gameplay-container">
+          <div class="ui-container">
+            <a class="game-exit" href="./">Exit</a>
+            <div class="gameplay-ui">
+              <div class="scoreboard">
+                <h1>0</h1>
+              </div>
+              <div class="recipes-container">
+                <div class="recipes-header">
+                  <h2>Recipes</h2>
+                  <div class="recipes-buttons">
+                    <button class="previous-button">
+                      <img src="images/left_arrow.svg" />
+                    </button>
+                    <button class="next-button">
+                      <img src="images/right_arrow.svg" />
+                    </button>
+                  </div>
+                </div>
+                <div class="drink-header">
+                  <img src="images/boba.png" />
+                  <h2>Bubble Tea</h2>
+                </div>
+                <p class="drink-instructions">
+                  1. Step 1<br />
+                  2. Step 2<br />
+                  3. Step 3<br />
+                </p>
+                <p class="serve-instructions">
+                  Click and drag your completed drink to the right customer!
+                  <br /><br />
+                  Discard incorrect/failed drinks with the trash can.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="maker-station-container">
+            <div class="customers-container">
+              <!-- <div
+                class="customer-order"
+                data-order="bubble-tea"
+                ondragover="OnDragOver(event)"
+                ondrop="ReceiveDrink(event)"
+                ondragenter="ShowSubmitOrder(event)"
+                ondragleave="HideSubmitOrder(event)"
+              >
+                <div class="order-icon">
+                  <img src="images/boba.png" />
+                </div>
+                <p class="order-name">Order Name</p>
+                <progress value="32" max="100">5s</progress>
+                <div class="order-submit-overlay">
+                  <p>Submit Order</p>
+                </div>
+              </div> -->
+            </div>
+            <div class="maker-station">
+              <div class="maker-station-decor-pot">
+                <img src="images/plant-pot.png" />
+              </div>
+              <div class="maker-station-cups-container">
+                <div class="cup-container">
+                  <!-- <p class="cup-container-instructions">
+                    Drag and Drop Ingredients Here
+                  </p> -->
+                  <img
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                    draggable="false"
+                    ondragstart="StartDragDrink(event)"
+                    ondrag="DragDrink()"
+                    ondragend="EndDragDrink()"
+                    data-drink=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ingredients-container">
+          <div class="ingredients-panel">
+            <div class="cup-section">
+              <h3>Cup</h3>
+              <div class="cups-grid-container">
+                <button class="cup-item-container" data-ingredient="cup-item">
+                  <div class="cup-item">
+                    <img src="images/cup.png" />
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div class="ingredients-section">
+              <h3>Ingredients</h3>
+              <div class="ingredients-grid-container">
+                <button
+                  class="ingredient-item-container"
+                  data-ingredient="boba-item"
+                >
+                  <div class="ingredient-item">
+                    <img src="images/boba_ingredient.png" title="Boba" />
+                    <!-- <p>Boba</p> -->
+                  </div>
+                </button>
+                <button
+                  class="ingredient-item-container"
+                  data-ingredient="syrup-item"
+                >
+                  <div class="ingredient-item">
+                    <img src="images/maple-syrup.png" title="Syrup" />
+                    <!-- <p>Syrup</p> -->
+                  </div>
+                </button>
+                <button
+                  class="ingredient-item-container"
+                  data-ingredient="ice-item"
+                >
+                  <div class="ingredient-item">
+                    <img src="images/ice-cube.png" title="Ice" />
+                    <!-- <p>Ice</p> -->
+                  </div>
+                </button>
+                <button
+                  class="ingredient-item-container"
+                  data-ingredient="tea-item"
+                >
+                  <div class="ingredient-item">
+                    <img src="images/tea-bag.png" title="Tea" />
+                    <!-- <p>Tea</p> -->
+                  </div>
+                </button>
+                <button
+                  class="ingredient-item-container"
+                  data-ingredient="milk-item"
+                >
+                  <div class="ingredient-item">
+                    <img src="images/milk.png" title="Milk" />
+                    <!-- <p>Milk</p> -->
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div class="trash-section">
+              <button
+                class="trash-item-container"
+                onclick="DiscardDrink()"
+                ondragover="OnDragOver(event)"
+                ondragenter="HighlightTrash(event)"
+                ondragleave="StopHighlightTrash(event)"
+                ondrop="DiscardDrink()"
+              >
+                <div class="trash-item">
+                  <img src="images/trash.svg" title="Trash" />
+                  <!-- <p>Trash</p> -->
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="game-over-overlay">
+        <div class="game-over-container">
+          <img src="images//barista.png" />
+          <div class="game-over-text-container">
+            <h1>Score: 20</h1>
+            <button class="replay-button">Replay</button>
+            <a href="./">Exit</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
